@@ -1,0 +1,1 @@
+artillery quick --count 50 -n 20 "http://localhost:8081/info" > resultado.txt

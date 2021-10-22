@@ -1,0 +1,186 @@
+Statistical profiling result from prof.log, (1454 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1332   91.6%          C:\Windows\SYSTEM32\ntdll.dll
+    119    8.2%          E:\Archivo\node.exe
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.1%   66.7%  LazyCompile: *resolve node:path:138:10
+      1    0.1%   33.3%  LazyCompile: *dirname node:path:612:10
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      3    0.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      3    0.2%  100.0%  GC
+   1451   99.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1332   91.6%  C:\Windows\SYSTEM32\ntdll.dll
+     14    1.1%    LazyCompile: *stat node:internal/modules/cjs/loader:145:14
+     10   71.4%      LazyCompile: ~tryFile node:internal/modules/cjs/loader:375:17
+     10  100.0%        LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:391:23
+     10  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:485:28
+     10  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:840:35
+      4   28.6%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:485:28
+      4  100.0%        LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:840:35
+      4  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      4  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+
+    119    8.2%  E:\Archivo\node.exe
+     91   76.5%    E:\Archivo\node.exe
+     23   25.3%      LazyCompile: ~realpathSync node:fs:1731:22
+     19   82.6%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:384:20
+     19  100.0%          LazyCompile: ~tryFile node:internal/modules/cjs/loader:375:17
+     18   94.7%            LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:391:23
+      1    5.3%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:485:28
+      4   17.4%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:485:28
+      4  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:840:35
+      4  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+     22   24.2%      LazyCompile: ~compileFunction node:vm:311:25
+     20   90.9%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1008:18
+     20  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+     20  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      2    9.1%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1046:37
+      2  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      2  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+     10   11.0%      LazyCompile: ~readSync node:fs:587:18
+      7   70.0%        LazyCompile: ~tryReadSync node:fs:387:21
+      7  100.0%          LazyCompile: ~readFileSync node:fs:399:22
+      7  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      3   30.0%        LazyCompile: *readFileSync node:fs:399:22
+      3  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      3  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+      8    8.8%      LazyCompile: ~stat node:internal/modules/cjs/loader:145:14
+      4   50.0%        LazyCompile: ~tryFile node:internal/modules/cjs/loader:375:17
+      4  100.0%          LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:391:23
+      4  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:485:28
+      4   50.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:485:28
+      4  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:840:35
+      4  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      6    6.6%      LazyCompile: ~openSync node:fs:497:18
+      6  100.0%        LazyCompile: ~readFileSync node:fs:399:22
+      6  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      6  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+      4    4.4%      E:\Archivo\node.exe
+      1   25.0%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:281:21
+      1  100.0%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:312:26
+      1  100.0%            LazyCompile: ~trySelf node:internal/modules/cjs/loader:432:17
+      1   25.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:485:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:840:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      1   25.0%        Eval: ~<anonymous> E:\Curso Backend\Trabajo 32\node_modules\socket.io\dist\index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      1   25.0%        Eval: ~<anonymous> E:\Curso Backend\Trabajo 32\node_modules\body-parser\node_modules\debug\src\node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      3    3.3%      LazyCompile: ~read node:internal/modules/package_json_reader:16:14
+      2   66.7%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:281:21
+      2  100.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:463:24
+      2  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:485:28
+      1   33.3%        LazyCompile: *readPackage node:internal/modules/cjs/loader:281:21
+      1  100.0%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:329:20
+      1  100.0%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:485:28
+      1    1.1%      LazyCompile: ~tryReadStart node:net:565:22
+      1  100.0%        LazyCompile: ~Socket._read node:net:575:34
+      1  100.0%          LazyCompile: ~<anonymous> node:net:580:26
+      1  100.0%            LazyCompile: ~onceWrapper node:events:479:21
+      1    1.1%      LazyCompile: ~slowCases node:internal/util:139:19
+      1  100.0%        LazyCompile: ~normalizeEncoding node:internal/util:134:27
+      1  100.0%          LazyCompile: ~validateEncoding node:internal/validators:200:26
+      1  100.0%            LazyCompile: ~update node:internal/crypto/hash:95:40
+      1    1.1%      LazyCompile: ~slice node:buffer:594:12
+      1  100.0%        LazyCompile: ~toString node:buffer:783:46
+      1  100.0%          LazyCompile: *readFileSync node:fs:399:22
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      1    1.1%      LazyCompile: ~remove node:internal/linkedlist:15:16
+      1  100.0%        LazyCompile: ~append node:internal/linkedlist:29:16
+      1  100.0%          LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%            LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1    1.1%      LazyCompile: ~onresolve node:dns:203:19
+      1    1.1%      LazyCompile: ~isatty node:tty:42:16
+      1  100.0%        LazyCompile: ~useColors E:\Curso Backend\Trabajo 32\node_modules\debug\src\node.js:155:19
+      1  100.0%          LazyCompile: ~createDebug E:\Curso Backend\Trabajo 32\node_modules\debug\src\common.js:60:22
+      1  100.0%            Eval: ~<anonymous> E:\Curso Backend\Trabajo 32\node_modules\engine.io\lib\transport.js:1:1
+      1    1.1%      LazyCompile: ~internalBinding node:internal/bootstrap/loaders:137:45
+      1  100.0%        Eval: ~<anonymous> node:internal/process/report:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:270:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:303:29
+      1    1.1%      LazyCompile: ~_write E:\Curso Backend\Trabajo 32\node_modules\mongodb\lib\cmap\message_stream.js:26:11
+      1  100.0%        LazyCompile: ~writeOrBuffer node:internal/streams/writable:371:23
+      1  100.0%          LazyCompile: ~Writable.write node:internal/streams/writable:293:36
+      1  100.0%            LazyCompile: ~ondata node:internal/streams/readable:748:18
+      1    1.1%      LazyCompile: ~URLStateMachine E:\Curso Backend\Trabajo 32\node_modules\whatwg-url\dist\url-state-machine.js:473:25
+      1  100.0%        LazyCompile: ~module.exports.basicURLParse E:\Curso Backend\Trabajo 32\node_modules\whatwg-url\dist\url-state-machine.js:1194:41
+      1  100.0%          LazyCompile: ~URLImpl E:\Curso Backend\Trabajo 32\node_modules\whatwg-url\dist\URL-impl.js:7:14
+      1  100.0%            LazyCompile: ~exports.setup E:\Curso Backend\Trabajo 32\node_modules\whatwg-url\dist\URL.js:49:17
+      1    1.1%      LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+      1  100.0%        LazyCompile: ~require node:internal/modules/cjs/helpers:91:31
+      1  100.0%          Eval: ~<anonymous> E:\Curso Backend\Trabajo 32\node_modules\@mapbox\node-pre-gyp\node_modules\semver\index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+      1    1.1%      LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      1  100.0%        LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+      1  100.0%          LazyCompile: ~require node:internal/modules/cjs/helpers:91:31
+      1  100.0%            Eval: ~<anonymous> E:\Curso Backend\Trabajo 32\node_modules\faker\lib\locales\id_ID\internet\index.js:1:1
+      1    1.1%      LazyCompile: ~Module._extensions..node node:internal/modules/cjs/loader:1144:39
+      1  100.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:748:24
+      1  100.0%          LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+      1  100.0%            LazyCompile: ~require node:internal/modules/cjs/helpers:91:31
+      1    1.1%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1126:39
+      1  100.0%        LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+      1    1.1%      LazyCompile: *resolve node:path:138:10
+      1  100.0%        LazyCompile: ~realpathSync node:fs:1731:22
+      1  100.0%          LazyCompile: ~toRealPath node:internal/modules/cjs/loader:384:20
+      1  100.0%            LazyCompile: ~tryFile node:internal/modules/cjs/loader:375:17
+      1    1.1%      LazyCompile: *readFileSync node:fs:399:22
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      3    2.5%    LazyCompile: *compileFunction node:vm:311:25
+      3  100.0%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1008:18
+      3  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+      3  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      3  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+      2    1.7%    LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1008:18
+      2  100.0%      LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+      2  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      2  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      2    1.7%    LazyCompile: ~realpathSync node:fs:1731:22
+      2  100.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:384:20
+      2  100.0%        LazyCompile: ~tryFile node:internal/modules/cjs/loader:375:17
+      2  100.0%          LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:391:23
+      1   50.0%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:329:20
+      1   50.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:485:28
+      2    1.7%    LazyCompile: ~readFileSync node:fs:399:22
+      2  100.0%      LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1101:37
+      1   50.0%        LazyCompile: ~Module.load node:internal/modules/cjs/loader:960:33
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+      1   50.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:748:24
+      1  100.0%          LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+      1  100.0%            LazyCompile: ~require node:internal/modules/cjs/helpers:91:31
+      2    1.7%    LazyCompile: ~Module._load node:internal/modules/cjs/loader:748:24
+      2  100.0%      LazyCompile: ~Module.require node:internal/modules/cjs/loader:988:36
+      2  100.0%        LazyCompile: ~require node:internal/modules/cjs/helpers:91:31
+      1   50.0%          Eval: ~<anonymous> E:\Curso Backend\Trabajo 32\node_modules\socket.io\dist\index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+      1   50.0%          Eval: ~<anonymous> E:\Curso Backend\Trabajo 32\node_modules\gauge\node_modules\string-width\index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1046:37
+
