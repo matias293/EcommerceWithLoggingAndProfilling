@@ -14,14 +14,14 @@ import apiRouter from '../routes/index';
 import authRouter from '../routes/auth'
 import { productsPersistencia } from '../persistencia/productos';
 import { mensajesPersistencia } from '../persistencia/mensajes';
-
+import Config from '../config/index'
 
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 
 const StoreOptions = {
 
   store: MongoStore.create({
-    mongoUrl: `mongodb+srv://user:PZvoslz9ew26uxIj@clustercodershop.wuu66.mongodb.net/ecommerce`,
+    mongoUrl: Config.MONGO_INGRESS,
     mongoOptions: advancedOptions,
   }),
 
