@@ -1,5 +1,5 @@
 {
-  "name": "Desafio 20",
+  "name": "ecommerce",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "start:cluster": "node dist/index.js --puerto=8082 --cluster",
     "start:profilling": "node --prof dist/index.js",
     "start:inspect": "node --inspect dist/index.js --puerto=8081",
-    "build:start": "npm run transpile && npm run start",
+    "start": "npm run transpile && node dist/index.js --cluster",
     "start:0x": "0x dist/index.js",
     "prod": "pm2 start ecosystem.config.js",
     "dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/index.js",

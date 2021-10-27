@@ -13,7 +13,7 @@ module.exports = {
       script: 'dist/index.js',
       watch: true,
       autorestart: true,
-       instances: 4,
+       instances: 12,
       args: '--puerto=8081',
     },
     {

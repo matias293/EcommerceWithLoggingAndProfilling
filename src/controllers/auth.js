@@ -1,8 +1,8 @@
+import cluster from 'cluster'
 
 import { fork } from 'child_process';
 import path from 'path';
 import os from 'os';
-import cluster from 'cluster'
 
 import {calculo} from '../utils/calculos'
 
@@ -92,10 +92,7 @@ class Auth {
       }
 
       info = (req, res) => {
-        console.log(process.platform)
-        console.log(process.version)
-        console.log(process.memoryUsage())
-        console.log(process.cwd())
+        
 
         res.json({'Plataforma':process.platform,
         'Version de Node':process.version,

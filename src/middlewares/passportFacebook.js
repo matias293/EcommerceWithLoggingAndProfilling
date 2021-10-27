@@ -7,8 +7,8 @@ import Config from '../config/index'
 const FaceBookStrategy = passportFacebook.Strategy;
 
 const strategyOptions= {
-  clientID: '1199081557245042',
-  clientSecret:'a9ced53c15fd8ea37ef51e635cf334af' ,
+  clientID: Config.FACEBOOK_APP_ID,
+  clientSecret:Config.FACEBOOK_APP_SECRET ,
   callbackURL: 'http://localhost:8080/auth/facebook/callback',
   profileFields: ['id', 'displayName', 'photos', 'emails'],
 };
